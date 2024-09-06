@@ -149,6 +149,6 @@ func (app *application) logoutUser(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
-func (app *application) authenticatedUser(r *http.Request) int {
-	return app.session.GetInt(r, "userID")
-}
+// func (app *application) authenticatedUser(r *http.Request) int {
+// 	return app.session.GetInt(r, "userID")
+// }

@@ -4,20 +4,20 @@
 {{if .Snippets}}
 <table>
   <tr>
+    <th>ID</th>
     <th>Title</th>
     <th>Created</th>
-    <th>ID</th>
   </tr>
   {{
     range.Snippets
   }}
   <tr>
+    <td>#{{.ID}}</td>
     <td>
       <a href="/snippet/{{.ID}}">{{.Title}}</a>
     </td>
     <!-- Use the new template function here -->
     <td>{{ humanDate .Created }}</td>
-    <td>#{{.ID}}</td>
   </tr>
   {{
     end

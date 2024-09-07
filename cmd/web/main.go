@@ -45,16 +45,16 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	dbUser := getEnv("DB_USER", "root")
-	dbPassword := getEnv("DB_PASSWORD", "")
-	dbName := getEnv("DB_NAME", "snippetbox")
+	dbUser := os.Getenv("DB_USER")
+	dbPassword := os.Getenv("DB_PASSWORD")
+	dbName := os.Getenv("DB_NAME")
 
 	dsn := fmt.Sprintf("%s:%s@/%s?parseTime=true", dbUser, dbPassword, dbName)
 
-	addr := flag.String("addr", getEnv("ADDR", ":4000"), "HTTP network address")
-	secret := flag.String("secret", getEnv("SECRET", "s6Ndh+pPbnzHbS*+9Pk8qGWhTzbpa@ge"), "Secret key")
-	tlsCertPath := getEnv("TLS_CERT_PATH", "./tls/cert.pem")
-	tlsKeyPath := getEnv("TLS_KEY_PATH", "./tls/key.pem")
+	addr := flag.String("addr", os.Getenv("ADDR"), "HTTP network address")
+	secret := flag.String("secret", os.Getenv("SECRET"), "Secret key")
+	tlsCertPath := os.Getenv("TLS_CERT_PATH")
+	tlsKeyPath := os.Getenv("TLS_KEY_PATH")
 
 	flag.Parse()
 
@@ -114,11 +114,4 @@ func openDB(dsn string) (*sql.DB, error) {
 		return nil, err
 	}
 	return db, nil
-}
-
-func getEnv(key, defaultValue string) string {
-	if value, exists := os.LookupEnv(key); exists {
-		return value
-	}
-	return defaultValue
 }

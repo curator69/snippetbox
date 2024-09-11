@@ -14,7 +14,7 @@ Snippetbox is a web application built in Go that allows users to paste, share, a
 
 ## Demo
 
-You can check out a live demo of Snippetbox hosted on an AWS EC2 instance: [Live Demo](http://13.233.101.20:4000)
+You can check out a live demo of Snippetbox hosted on an AWS EC2 instance: [Live Demo](https://13.233.101.20:4000)
 
 ## Project Setup
 
@@ -79,7 +79,7 @@ You can check out a live demo of Snippetbox hosted on an AWS EC2 instance: [Live
 
 ## Deployment
 
-Snippetbox is currently deployed on an AWS EC2 instance and can be accessed here: [http://13.233.101.20:4000](http://13.233.101.20:4000)
+Snippetbox is currently deployed on an AWS EC2 instance and can be accessed here: [https://13.233.101.20:4000](https://13.233.101.20:4000)
 
 ### How to Deploy
 

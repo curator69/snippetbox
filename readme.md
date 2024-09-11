@@ -58,7 +58,7 @@ You can check out a live demo of Snippetbox hosted on an AWS EC2 instance: [Live
    ```bash
    go run cmd/web/*
    ```
-7. Access the application by visiting http://localhost:4000 in your browser.
+7. Access the application by visiting https://localhost:4000 in your browser.
 
 ### File Structure
 
